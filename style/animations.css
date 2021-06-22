@@ -1,0 +1,20 @@
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: translateY(10px);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: translateY(0);
+  }
+}
+
+.animate__pulse {
+  animation: pulse 2s infinite ease-in;
+}
