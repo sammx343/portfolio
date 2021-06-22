@@ -112,9 +112,36 @@
 }
 
 .main-header__link {
+  position: relative;
+  top: 0;
+  padding-bottom: 5px;
   font-size: 1.5rem;
   font-family: "Satisfy", cursive;
   color: var(--secondary-dark-color);
+  transition: 0.5s all;
+}
+
+.main-header__link::after {
+  position: absolute;
+  top: 75%;
+  right: 0;
+  content: "";
+  width: 75%;
+  height: 2px;
+  background: var(--secondary-dark-color);
+  transition: 0.5s width;
+  opacity: 0;
+}
+
+.main-header__link:hover {
+  top: -5px;
+  text-decoration: none;
+}
+
+.main-header__link:hover:after {
+  width: 0%;
+  opacity: 1;
+  /* transition: 0.25s width, 0.25s 0.25s opacity; */
 }
 
 .scroll-prompt {
@@ -136,6 +163,7 @@
 }
 
 .scroll-prompt__text {
+  margin: 0;
   font-size: 1.5rem;
   font-family: "Satisfy", cursive;
 }

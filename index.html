@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style/animations.css" />
   </head>
   <body>
     <div class="main-page">
@@ -94,8 +95,10 @@
         </div> -->
         <div class="scroll-prompt">
           <p class="scroll-prompt__text">Scroll to Continue</p>
-          <div class="scroll-prompt__bar scroll-prompt--left-bar"></div>
-          <div class="scroll-prompt__bar scroll-prompt--right-bar"></div>
+          <div class="scroll-prompt__bar-container animate__pulse">
+            <div class="scroll-prompt__bar scroll-prompt--left-bar"></div>
+            <div class="scroll-prompt__bar scroll-prompt--right-bar"></div>
+          </div>
         </div>
       </div>
     </div>
