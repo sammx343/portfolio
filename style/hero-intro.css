@@ -1,0 +1,230 @@
+/*------------------------------------*\
+  .HERO-INTRO
+\*------------------------------------*/
+
+.hero-intro {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--main-light-color);
+  --box-line-outer-width: 90%;
+  --box-line-outer-height: 90%;
+  --box-line-inner-width: 80%;
+  --box-line-inner-height: 80%;
+  --line-thickness: 4px;
+}
+
+.box-line-container {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box-line-container--outer {
+  top: calc((100% - var(--box-line-outer-height)) / 2);
+  left: calc((100% - var(--box-line-outer-width)) / 2);
+  width: var(--box-line-outer-width);
+  height: var(--box-line-outer-height);
+}
+
+.box-line-container--inner {
+  top: calc((100% - var(--box-line-inner-height)) / 2);
+  left: calc((100% - var(--box-line-inner-width)) / 2);
+  width: var(--box-line-inner-width);
+  height: var(--box-line-inner-height);
+}
+
+.invitation {
+  width: 50vw;
+  max-width: 800px;
+  min-width: 400px;
+  height: 70vh;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(188deg);
+  z-index: 2;
+}
+
+.invitation__curve {
+  fill: transparent;
+}
+
+.invitation__text {
+  font-size: 2rem;
+  opacity: 0;
+}
+
+.main-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-info__subtitle {
+  transform: translate(-50%, 0);
+  position: relative;
+  left: 100%;
+  opacity: 0;
+  font-size: 3rem;
+  font-family: "Satisfy", cursive;
+}
+
+.main-info__title {
+  transform: translate(50%, 0);
+  position: relative;
+  left: -100%;
+  opacity: 0;
+  font-size: 4rem;
+  font-family: "Dela Gothic One", cursive;
+}
+
+.main-info--text-center {
+  text-align: center;
+}
+
+.main-info--fallen-letter-first {
+  display: inline-block;
+  transform-origin: 0 50%;
+  transform: translate(25px, 0) rotate(-45deg);
+}
+
+.main-info--fallen-letter-last {
+  display: inline-block;
+  transform-origin: 0 50%;
+  transform: translate(25px, 0) rotate(75deg);
+}
+
+.main-header {
+  position: absolute;
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  top: calc((100% - var(--box-line-inner-height)) / 2);
+  left: calc((100% - var(--box-line-inner-width)) / 2);
+  transform: translateY(100%);
+  z-index: 3;
+}
+
+.main-header__link {
+  font-size: 1.5rem;
+  font-family: "Satisfy", cursive;
+  color: var(--secondary-dark-color);
+}
+
+.scroll-prompt {
+  position: absolute;
+  top: var(--box-line-inner-height);
+  left: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+}
+
+.scroll-prompt__bar {
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background: black;
+  border: 3px solid black;
+  border-radius: 50% 50% 0 50%;
+  top: 75%;
+}
+
+.scroll-prompt__text {
+  font-size: 1.5rem;
+  font-family: "Satisfy", cursive;
+}
+
+.scroll-prompt--left-bar {
+  transform: translate(0, 0) rotate(-45deg);
+  left: 38%;
+  height: 0;
+  opacity: 0;
+}
+
+.scroll-prompt--right-bar {
+  transform: translateX(00%) rotate(45deg);
+  left: 55%;
+  height: 0;
+  opacity: 0;
+  top: 125%;
+}
+
+.showup-line {
+  position: absolute;
+  border: 5px solid var(--secondary-dark-color);
+  border-radius: 50%;
+  background: var(--secondary-dark-color);
+  opacity: 0;
+}
+
+.showup-line--horizontal {
+  width: 0%;
+  height: var(--line-thickness);
+}
+
+.showup-line--vertical {
+  height: 0%;
+  width: var(--line-thickness);
+}
+
+.showup-line--top {
+  top: 0;
+  left: 50%;
+}
+
+.showup-line--bottom {
+  bottom: 0;
+}
+
+.showup-line--left {
+  top: 0;
+  left: 0;
+}
+
+.showup-line--right {
+  top: 0;
+  right: 0;
+}
+
+.showup-line--bottom.showup-line--inner {
+  right: 0%;
+}
+
+.text-show-line {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 200px;
+  max-width: 60vw;
+  width: 1px;
+  border: 3px solid var(--secondary-dark-color);
+  border-radius: 50%;
+  background: var(--secondary-dark-color);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.text-show-line__text-cover {
+  position: absolute;
+  top: 0;
+  width: 35vw;
+  height: 50%;
+  background: var(--main-light-color);
+}
+
+.text-show-line__cover-top {
+  left: 0;
+  transform: translate(4px, 2px);
+}
+
+.text-show-line__cover-bottom {
+  top: 50%;
+  right: 0;
+  transform: translate(-4px, 2px);
+}
