@@ -42,9 +42,23 @@
     if (window.scrollY > offsetScroll && window.scrollY < (heroIntroEl.offsetHeight + offsetScroll)) {
       console.log(window.scrollY);
       heroIntroEl.style.transform = `translateY(${-window.scrollY + offsetScroll}px)`;
+      ExitAnimationTimeLine();
     }
     if (window.scrollY < offsetScroll) {
       heroIntroEl.style.transform = `translateY(0px)`;
     }
+  }
+
+  function ExitAnimationTimeLine() {
+    let backTimeLine = gsap.timeline();
+    backTimeLine.fromTo(".scroll-prompt", { opacity: 1 }, { opacity: 0, duration: 0.5 });
+    backTimeLine.fromTo(".main-info__subtitle", { left: "50%" }, { left: "0%", duration: 0.5 });
+    backTimeLine.fromTo(".main-info__title", { left: "-50%" }, { left: "0%", duration: 0.5 }, "-=0.5");
+    backTimeLine.fromTo(".text-show-line", { width: "500px"}, { width: "1px", duration: 0.5 });
+    backTimeLine.fromTo(".text-show-line", { height: "5px" }, { height: "200px", duration: 0.5 });
+    backTimeLine.fromTo(".text-show-line__text-cover", { opacity: 0 }, { opacity: 1, duration: 0 });
+    backTimeLine.to(".main-info__subtitle", { left: "100%", duration: 0.5 });
+    backTimeLine.to(".main-info__title", { left: "-100%", duration: 0.5 }, "-=0.5");
+    backTimeLine.fromTo(".hero-intro", { opacity: 1 }, { opacity: 0, duration: 0.5 });
   }
 })();
