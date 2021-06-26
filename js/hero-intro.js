@@ -1,4 +1,5 @@
 (function () {
+  var heroIntroEl = document.querySelector(".hero-intro");
   gsap.to(".text-show-line", { top: "49%", duration: 1.5, ease: "back" });
   startTextHeroIntroAnimations();
   welcomeAnimationText();
@@ -34,5 +35,16 @@
     let tl = gsap.timeline();
     tl.to(".invitation__text", { opacity: 1, delay: 1, duration: 0.5 });
     tl.to(".invitation", { rotate: 8, duration: 2});
+  }
+
+  window.onscroll = function () {
+    const offsetScroll = 1000;
+    if (window.scrollY > offsetScroll && window.scrollY < (heroIntroEl.offsetHeight + offsetScroll)) {
+      console.log(window.scrollY);
+      heroIntroEl.style.transform = `translateY(${-window.scrollY + offsetScroll}px)`;
+    }
+    if (window.scrollY < offsetScroll) {
+      heroIntroEl.style.transform = `translateY(0px)`;
+    }
   }
 })();
