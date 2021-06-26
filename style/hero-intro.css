@@ -13,6 +13,7 @@
   --box-line-inner-width: 80%;
   --box-line-inner-height: 80%;
   --line-thickness: 4px;
+  z-index: 1;
 }
 
 .box-line-container {
