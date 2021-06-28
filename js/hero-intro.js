@@ -1,8 +1,16 @@
 (function () {
-  var heroIntroEl = document.querySelector(".hero-intro");
+  let heroIntroEl = document.querySelector(".hero-intro");
+  let scrollAnimationStates = {
+    notCreated : "notCreated",
+    created: "created"
+  }
+  scrollAnimationState = scrollAnimationStates.notCreated;
+
   gsap.to(".text-show-line", { top: "49%", duration: 1.5, ease: "back" });
-  startTextHeroIntroAnimations();
-  welcomeAnimationText();
+  
+
+  let introTimeLine = startTextHeroIntroAnimations();
+  let scrollAnimationTl = null;
 
   function startTextHeroIntroAnimations() {
     let tl = gsap.timeline();
@@ -28,37 +36,50 @@
     tl.to(".scroll-prompt--left-bar", { opacity: 1, duration: 0});
     tl.to(".scroll-prompt--left-bar", { height: 40, duration: 0.25});
     tl.to(".scroll-prompt--right-bar", { opacity: 1, duration: 0, });
-    tl.to(".scroll-prompt--right-bar", { height: 40, top: "75%", duration: 0.25});
-  }
-
-  function welcomeAnimationText(){
-    let tl = gsap.timeline();
-    tl.to(".invitation__text", { opacity: 1, delay: 1, duration: 0.5 });
-    tl.to(".invitation", { rotate: 8, duration: 2});
+    tl.to(".scroll-prompt--right-bar", { height: 40, top: "75%", duration: 0.25 });
+    return tl;
   }
 
   window.onscroll = function () {
-    const offsetScroll = 1000;
-    if (window.scrollY > offsetScroll && window.scrollY < (heroIntroEl.offsetHeight + offsetScroll)) {
-      console.log(window.scrollY);
-      heroIntroEl.style.transform = `translateY(${-window.scrollY + offsetScroll}px)`;
-      ExitAnimationTimeLine();
+    const offsetScroll = 4000;
+    const offSetHeroIntroTransform = 5000;
+    const proportion = window.scrollY / (heroIntroEl.offsetHeight + offsetScroll);
+    
+    InstantiateScrollAnimationTimeLine(proportion);
+    if (window.scrollY > offSetHeroIntroTransform && window.scrollY < (heroIntroEl.offsetHeight*2 + offSetHeroIntroTransform)) {
+      heroIntroEl.style.transform = `translateY(${-window.scrollY + offSetHeroIntroTransform}px)`;
     }
-    if (window.scrollY < offsetScroll) {
+    if (window.scrollY < offSetHeroIntroTransform) {
       heroIntroEl.style.transform = `translateY(0px)`;
     }
   }
 
+  function InstantiateScrollAnimationTimeLine(proportion) {
+    if (scrollAnimationState === scrollAnimationStates.notCreated) {
+      scrollAnimationTl = ExitAnimationTimeLine();
+      
+      scrollAnimationState = scrollAnimationStates.created;
+    }
+    scrollAnimationTl.pause(scrollAnimationTl.totalDuration() * proportion);
+  }
+
   function ExitAnimationTimeLine() {
-    let backTimeLine = gsap.timeline();
-    backTimeLine.fromTo(".scroll-prompt", { opacity: 1 }, { opacity: 0, duration: 0.5 });
-    backTimeLine.fromTo(".main-info__subtitle", { left: "50%" }, { left: "0%", duration: 0.5 });
-    backTimeLine.fromTo(".main-info__title", { left: "-50%" }, { left: "0%", duration: 0.5 }, "-=0.5");
-    backTimeLine.fromTo(".text-show-line", { width: "500px"}, { width: "1px", duration: 0.5 });
-    backTimeLine.fromTo(".text-show-line", { height: "5px" }, { height: "200px", duration: 0.5 });
-    backTimeLine.fromTo(".text-show-line__text-cover", { opacity: 0 }, { opacity: 1, duration: 0 });
-    backTimeLine.to(".main-info__subtitle", { left: "100%", duration: 0.5 });
-    backTimeLine.to(".main-info__title", { left: "-100%", duration: 0.5 }, "-=0.5");
-    backTimeLine.fromTo(".hero-intro", { opacity: 1 }, { opacity: 0, duration: 0.5 });
+    introTimeLine.pause(introTimeLine.totalDuration());
+
+    let tl = gsap.timeline({paused: true});
+    tl.fromTo(".scroll-prompt", { opacity: 1 }, { opacity: 0, duration: 0.5 });
+    tl.fromTo(".main-info__subtitle", { left: "50%" }, { left: "0%", duration: 0.5 });
+    tl.fromTo(".main-info__title", { left: "-50%" }, { left: "0%", duration: 0.5 }, "-=0.5");
+    tl.fromTo(".text-show-line", { width: "500px"}, { width: "1px", duration: 0.5 });
+    tl.fromTo(".text-show-line", { height: "5px" }, { height: "200px", duration: 0.5 });
+    tl.fromTo(".text-show-line__text-cover", { opacity: 0 }, { opacity: 1, duration: 0 });
+    tl.to(".main-info__subtitle", { left: "100%", duration: 0.5 });
+    tl.to(".main-info__title", { left: "-100%", duration: 0.5 }, "-=0.5");
+    tl.to(".main-info__subtitle", { opacity: 0, duration: 0 });
+    tl.to(".main-info__title", { opacity: 0, duration: 0 });
+    tl.to(".text-show-line", { height: 0, duration: 0.5 });
+    tl.to(".text-show-line", { opacity: 0, duration: 0 });
+
+    return tl;
   }
 })();
