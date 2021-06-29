@@ -11,6 +11,34 @@
   width: 100%;
   min-height: 100vh;
   padding: 5rem 0;
+  color: white;
+}
+
+.me-info__container {
+  max-width: 800px;
+  height: 70vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.me-info__title {
+  font-size: 7rem;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.me-info__subtitle {
+  font-size: 3rem;
+  margin: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.me-info__paragraph {
+  font-size: 1.2rem;
+  font-family: "Zilla Slab", serif;
 }
 
 .word-strip {
@@ -27,14 +55,17 @@
 .word-strip__group {
   position: absolute;
   display: flex;
+  width: 2000px;
   text-align: center;
   align-items: center;
+  justify-content: space-around;
   will-change: position;
 }
 
-.word-strip p {
+.word-strip__word {
   margin-right: 2.5rem;
   text-align: center;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-family: "PT Sans Narrow", sans-serif;
 }
