@@ -193,7 +193,7 @@
             </ul>
             <p class="web-portfolio__description">
               Most of the web work I've been doing for the last 2 years have
-              been vanilla development.
+              been vanilla.
             </p>
             <p class="web-portfolio__description">
               I don't think as my self as an expert, and I'm still learning new
@@ -217,7 +217,7 @@
               year respectively), content creators like
               <strong>Elementor</strong>
               (1 year) and other frameworks and libraries like
-              <strong>BS</strong>,<strong>JQuery</strong> and
+              <strong>BS</strong>, <strong>JQuery</strong> and
               <strong>Gsap</strong> (3 years, 3 years and 1 year).
             </p>
             <div class="web-portfolio__separator"></div>
@@ -248,12 +248,101 @@
             <p class="web-portfolio__subtitle">
               TO KEEP MAKING FUN, DYNAMIC AND FUNCTIONAL WEBSITES
             </p>
+            <div class="web-portfolio__separator"></div>
+            <p class="web-strip__subtitle">SOME OF MY WORK:</p>
+            <div class="web-strip">
+              <div class="web-strip__subtitle">PISOTÓN</div>
+              <img
+                class="web-strip__image"
+                src="./assets/img/pisoton1.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/pisoton2.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/pisoton3.png"
+                alt=""
+              />
+              <div class="web-strip__description">
+                A website and blog for the educational and preventative children
+                program: Pisotón
+              </div>
+              <ul class="web-strip__list">
+                <li>Maintenance and new changes to all the site</li>
+                <li>HTML, JS and CSS</li>
+                <li>Bootstrap and JQuery</li>
+                <li>PHP</li>
+              </ul>
+            </div>
+
+            <div class="web-strip">
+              <div class="web-strip__subtitle">Pareto Network</div>
+              <img
+                class="web-strip__image"
+                src="./assets/img/pareto1.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/pareto2.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/pareto3.png"
+                alt=""
+              />
+              <div class="web-strip__description">
+                A website for the cryptocurrency: Pareto
+              </div>
+              <ul class="web-strip__list">
+                <li>
+                  Maintenance, brand new user interface and back-end changes
+                </li>
+                <li>Vue JS</li>
+                <li>Node JS</li>
+                <li>HTML, JS and CSS</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div class="web-strip">
+              <div class="web-strip__subtitle">CMASC</div>
+              <img
+                class="web-strip__image"
+                src="./assets/img/cmasc1.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/cmasc2.png"
+                alt=""
+              />
+              <img
+                class="web-strip__image"
+                src="./assets/img/cmasc3.png"
+                alt=""
+              />
+              <div class="web-strip__description">
+                A landing page for the civil engineer company, CMASC
+              </div>
+              <ul class="web-strip__list">
+                <li>New Landing Page</li>
+                <li>Wordpress and Elementor</li>
+                <li>HTML, JS and CSS</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <!-- <script src="js/smooth-mouse-wheel.js"></script> -->
   <script src="js/hero-intro.js"></script>
@@ -261,9 +350,7 @@
   <script src="js/index.js"></script>
   <script src="js/web-development.js"></script>
 
-  <!-- <script>
-    $(document).ready(function () {
-      $(".main-page").smoothWheel();
-    });
-  </script> -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+  </script>
 </html>

@@ -1,7 +1,6 @@
 (function () {
   document.addEventListener("mousemove", mouseEvents);
   const webDevText = document.querySelector(".web-dev__title");
-  const webDevTextShadow = document.querySelector(".wev-dev__title-shadow");
 
   function mouseEvents(e) {
     changeTextBackgrundPosition(e);

@@ -7,7 +7,7 @@
   min-height: 100vh;
   width: 100%;
   padding: 200px 0px;
-  background: linear-gradient(180deg, #08010b 60%, #4e1c67);
+  background: linear-gradient(180deg, #08010b 30%, #4e1c67);
   background-attachment: fixed;
 }
 
@@ -15,16 +15,18 @@
   height: 50px;
   position: sticky;
   top: 50%;
+  margin-top: 40vh;
   padding: 0 1rem 0 5rem;
   width: max-content;
+  text-align: center;
 }
 
 .web-dev__title {
   position: relative;
   font-size: 12rem;
   font-weight: 900;
-  margin: 0;
-  width: min-content;
+  margin: 0 auto;
+  width: 100%;
   background: url(../assets/img/web-dev-background.jpg);
   background-clip: text;
   -webkit-background-clip: text;
@@ -48,30 +50,36 @@
 }
 
 .web-portfolio {
-  flex-grow: 1;
+  width: 50%;
 }
 
 .web-portfolio__description-container {
   color: white;
-  margin-top: 50vh;
+  margin-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
   font-family: "Anton", cursive;
-  transform: perspective(100px) rotateY(-1deg);
+  transform: perspective(100px) rotateY(-0.2deg);
   /* padding: 0 5rem; */
   max-width: 85%;
 }
 
 .web-portfolio__subtitle {
-  font-size: 3.5rem;
-  font-family: "Anton", cursive;
   -webkit-box-reflect: below 14px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.25, transparent), to(rgb(255, 255, 255)));
 }
 
-.web-portfolio__description {
+.web-portfolio__subtitle,
+.web-strip__subtitle {
+  font-size: 3.5rem;
+  font-family: "Anton", cursive;
+  margin-bottom: 2rem;
+}
+
+.web-portfolio__description,
+.web-strip__description {
   font-size: 2rem;
   font-family: "Antonio", sans-serif;
 }
@@ -82,13 +90,27 @@
   border-bottom: 3px solid white;
 }
 
-.web-portfolio__list {
+.web-portfolio__list,
+.web-strip__list {
   font-size: 2rem;
   font-family: "Antonio", sans-serif;
+  margin-bottom: 5rem;
 }
 
 .web-portfolio__subtitle,
 .web-portfolio__list,
-.web-portfolio__description {
+.web-portfolio__description,
+.web-strip__subtitle,
+.web-strip__list,
+.web-strip__description {
   text-shadow: 5px 5px black;
+}
+
+.web-strip {
+  max-width: 100%;
+}
+
+.web-strip__image {
+  max-width: 100%;
+  margin-bottom: 0.5rem;
 }
