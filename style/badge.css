@@ -1,0 +1,32 @@
+.badge-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 50%;
+  text-decoration: none;
+}
+
+.badge__logo {
+  width: 200px;
+}
+
+.badge__title {
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  text-decoration: none;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  font-size: 2rem;
+}
+
+.badge:hover .badge__logo {
+  animation: pulse 1s;
+}

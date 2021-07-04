@@ -3,3 +3,13 @@
   --main-light-color: #f9f3eb;
   --secondary-dark-color: #000000;
 }
+
+@font-face {
+  font-family: "Pricedown";
+  src: url("../assets/fonts/pricedown-bold.otf");
+}
+
+@font-face {
+  font-family: "PricedownRegular";
+  src: url("../assets/fonts/pricedown.otf");
+}
