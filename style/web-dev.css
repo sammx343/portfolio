@@ -1,5 +1,94 @@
+/*------------------------------------*\
+  .WEB-DEVELOPMENT
+\*------------------------------------*/
+
 .web-dev {
+  display: flex;
   min-height: 100vh;
   width: 100%;
-  background: black;
+  padding: 200px 0px;
+  background: linear-gradient(180deg, #08010b 60%, #4e1c67);
+  background-attachment: fixed;
+}
+
+.web-dev__title-container {
+  height: 50px;
+  position: sticky;
+  top: 50%;
+  padding: 0 1rem 0 5rem;
+  width: max-content;
+}
+
+.web-dev__title {
+  position: relative;
+  font-size: 12rem;
+  font-weight: 900;
+  margin: 0;
+  width: min-content;
+  background: url(../assets/img/web-dev-background.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Anton", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Syncopate", sans-serif;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  -webkit-text-stroke: 2px white;
+}
+
+.web-dev__title:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #292929;
+  z-index: 1;
+  transform: translateZ(-1px) translate(0px, 4px) scale(0.9);
+}
+
+.web-portfolio {
+  flex-grow: 1;
+}
+
+.web-portfolio__description-container {
+  color: white;
+  margin-top: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Anton", cursive;
+  transform: perspective(100px) rotateY(-1deg);
+  /* padding: 0 5rem; */
+  max-width: 85%;
+}
+
+.web-portfolio__subtitle {
+  font-size: 3.5rem;
+  font-family: "Anton", cursive;
+  -webkit-box-reflect: below 14px -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), color-stop(0.25, transparent), to(rgb(255, 255, 255)));
+}
+
+.web-portfolio__description {
+  font-size: 2rem;
+  font-family: "Antonio", sans-serif;
+}
+
+.web-portfolio__separator {
+  width: 50%;
+  margin: 5rem auto;
+  border-bottom: 3px solid white;
+}
+
+.web-portfolio__list {
+  font-size: 2rem;
+  font-family: "Antonio", sans-serif;
+}
+
+.web-portfolio__subtitle,
+.web-portfolio__list,
+.web-portfolio__description {
+  text-shadow: 5px 5px black;
 }

@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  .ME-INFO
+\*------------------------------------*/
+
 .me-container {
   min-height: 7000px;
   width: 100%;
@@ -10,14 +14,14 @@
   top: 0;
   width: 100%;
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   color: white;
 }
 
 .me-info__container {
   max-width: 800px;
-  height: 70vh;
   width: 100%;
+  padding: 2rem 0;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -37,7 +41,7 @@
 }
 
 .me-info__paragraph {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Zilla Slab", serif;
 }
 
