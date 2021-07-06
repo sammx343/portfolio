@@ -13,3 +13,8 @@
   font-family: "PricedownRegular";
   src: url("../assets/fonts/pricedown.otf");
 }
+
+@font-face {
+  font-family: "Halo";
+  src: url("../assets/fonts/Halo.ttf");
+}

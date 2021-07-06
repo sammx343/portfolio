@@ -58,3 +58,71 @@
 .game-dev--spacer {
   margin-bottom: 50vh;
 }
+
+.game-dev__section-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #44b8f5 5%, #193f72 40%);
+  padding-top: 50vh;
+  text-align: center;
+}
+
+.games-container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.games_subtitle {
+  position: relative;
+  font-family: "Halo", Arial, Helvetica, sans-serif;
+  margin: auto;
+  font-size: 8rem;
+  max-width: 60%;
+  color: black;
+  background: conic-gradient(
+    #699aad,
+    #bbd6d8 15%,
+    #6e8f98 20%,
+    #206c90 25%,
+    #bbd6d8 35%,
+    #bbd2d4 50%,
+    #c2e0e4 50%,
+    #206c90 75%,
+    #9dc6cd 78%,
+    #547788 80%,
+    #c2e0e4 85%,
+    #206c90 90%
+  );
+  background-size: 100%;
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 5rem;
+  -webkit-text-stroke: 1.5px #99babd;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+.games_subtitle:after {
+  content: attr(title);
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: -1;
+  transform: translateZ(-1px);
+}
+
+.games_description {
+  font-size: 2rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}

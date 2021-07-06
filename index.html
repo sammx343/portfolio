@@ -2,6 +2,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/locomotivemtl/locomotive-scroll/master/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="style/root.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/hero-intro.css" />
@@ -60,6 +64,10 @@
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/animations.css" />
@@ -369,34 +377,48 @@
               <h3 class="badge__title">Unity Junior Programmer</h3>
             </a>
           </div>
-          <p class="game-dev__description game-dev--spacer">
-            Game Development and Game Design is what I love the most
-          </p>
-          <p class="game-dev__description game-dev--spacer">
-            I love thinking on Gameplay Mechanism's, Game Architecture and
-            learning about Unity, C# and game related things
-          </p>
-          <p class="game-dev__description game-dev--spacer">
-            As I told you, all my work have been from freelance and personnal
-            projects, but I'm proactive with my Game Dev Learning and I always
-            aim for the best practices and making fun games
-          </p>
-
-          <p class="game-dev__description game-dev--spacer">
-            Here are some of the projects I've worked on:
-          </p>
+          <div class="game-dev__section-container">
+            <p class="game-dev__description">
+              Game Development and Game Design is what I love the most. As you
+              see, I love making interactive and visually stimulating things,
+              and games are all about that.
+            </p>
+          </div>
+          <div class="game-dev__section-container">
+            <p class="game-dev__description">
+              I love thinking on Gameplay Mechanism's, Game Architecture and
+              learning about Unity, C# and game related stuff.
+            </p>
+          </div>
+          <div class="game-dev__section-container">
+            <p class="game-dev__description">
+              As I told you, all my work have been from freelance and personnal
+              projects, but I'm proactive with my Game Dev Learning and I always
+              aim for the best practices and making fun games and visually good
+              games.
+            </p>
+          </div>
+        </div>
+        <div class="games">
+          <div class="games-container">
+            <p class="games_subtitle" title="Here, take a look">
+              Here, take a look
+            </p>
+            <p class="games_description">AT SOME OF MY WORK</p>
+            <p class="games_description"><small>(YEAH, NOW HALO)</small></p>
+          </div>
         </div>
       </div>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
   <!-- <script src="js/smooth-mouse-wheel.js"></script> -->
   <script src="js/hero-intro.js"></script>
   <script src="js/me-info.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/web-development.js"></script>
+  <script src="js/web-dev.js"></script>
+  <script src="js/game-dev.js"></script>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);
