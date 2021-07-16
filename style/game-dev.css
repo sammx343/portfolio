@@ -3,7 +3,7 @@
   min-height: 100vh;
   width: 100%;
   background: #44b8f5;
-  padding: 5rem 0;
+  padding-top: 5rem;
 }
 
 .game-dev__container {
@@ -69,60 +69,115 @@
 .games {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(180deg, #44b8f5 5%, #193f72 40%);
-  padding-top: 50vh;
+  background: #193f72;
+  padding-top: 25vh;
   text-align: center;
 }
 
 .games-container {
   max-width: 80%;
   margin: auto;
+  margin-bottom: 5rem;
 }
 
 .games_subtitle {
   position: relative;
   font-family: "Halo", Arial, Helvetica, sans-serif;
   margin: auto;
-  font-size: 8rem;
+  font-size: 10rem;
   max-width: 60%;
   color: black;
   background: conic-gradient(
+    from 0deg at 0% 0%,
     #699aad,
     #bbd6d8 15%,
-    #6e8f98 20%,
     #206c90 25%,
     #bbd6d8 35%,
+    #206c90 45%,
     #bbd2d4 50%,
-    #c2e0e4 50%,
-    #206c90 75%,
-    #9dc6cd 78%,
+    #c2e0e4 60%,
+    #206c90 70%,
+    #9dc6cd 75%,
     #547788 80%,
     #c2e0e4 85%,
-    #206c90 90%
+    #206c90 90%,
+    #699aad
   );
   background-size: 100%;
   color: white;
   background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
   color: transparent;
-  line-height: 5rem;
+  line-height: 6.5rem;
   -webkit-text-stroke: 1.5px #99babd;
   z-index: 1;
   transform-style: preserve-3d;
-}
-
-.games_subtitle:after {
-  content: attr(title);
-  width: 100%;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  z-index: -1;
-  transform: translateZ(-1px);
 }
 
 .games_description {
   font-size: 2rem;
   color: white;
   font-family: "Montserrat", sans-serif;
+}
+
+.game--halo-desc {
+  color: white;
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  margin: 2rem 0 auto;
+}
+
+.game--halo-desc-small {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", cursive;
+  text-shadow: 2px 2px black;
+}
+
+.single-game-container {
+  display: flex;
+}
+
+.single-game-container__video {
+  min-width: 50%;
+  width: 50%;
+}
+
+.single-game-container__video video {
+  width: 100%;
+}
+
+.single-game-container__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  padding: 2rem;
+  border-top: 5px dashed white;
+  width: 50%;
+}
+
+.single-game-container__text-container:nth-child(odd) {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.single-game-container__title {
+  font-family: "Bebas Neue", cursive;
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px black;
+}
+
+.single-game-container__description {
+  font-family: "Montserrat";
+  font-weight: 100;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.single-game-container__list {
+  margin-top: 0;
 }

@@ -47,15 +47,47 @@
       y: 300,
       opacity: 0,
       start: -300,
-      duration: 0.5,
+      duration: 1,
       ease: "power3.out",
     });
   });
 
-  gsap.from(".games_subtitle", {
-    scrollTrigger: ".games_subtitle",
-    start: "top bottom",
-    scale: 0.75,
-    duration: 1,
+  function haloChangingBackground(deg, x, y) {
+    const colorsPercentage = `
+    #699aad,
+    #bbd6d8 15%,
+    #206c90 25%,
+    #bbd6d8 35%,
+    #206c90 45%, 
+    #bbd2d4 50%,
+    #c2e0e4 60%,
+    #206c90 70%,
+    #9dc6cd 75%,
+    #547788 80%,
+    #c2e0e4 85%, 
+    #206c90 90%, 
+    #699aad
+    `;
+
+    return `conic-gradient(from ${deg}deg at ${x}% ${y}%, ${colorsPercentage})`;
+  }
+
+  console.log(haloChangingBackground(360, 100, 100));
+  var tl = gsap.timeline({ repeat: -1 });
+  tl.to(".games_subtitle", {
+    background: haloChangingBackground(360, 100, 0),
+    duration: 20,
+  });
+  tl.to(".games_subtitle", {
+    background: haloChangingBackground(0, 100, 100),
+    duration: 20,
+  });
+  tl.to(".games_subtitle", {
+    background: haloChangingBackground(360, 0, 100),
+    duration: 20,
+  });
+  tl.to(".games_subtitle", {
+    background: haloChangingBackground(0, 0, 0),
+    duration: 20,
   });
 })();
