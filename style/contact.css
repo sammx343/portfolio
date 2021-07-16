@@ -1,0 +1,54 @@
+.contact {
+  position: relative;
+  background: #26486c;
+}
+
+.contact-container {
+  background: #c4ac7c;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0.1rem;
+  overflow-y: hidden;
+}
+
+.contact__start {
+  padding: 1rem 5rem;
+  background: #333030;
+}
+
+.contact_end {
+  align-self: flex-end;
+}
+
+.contact__title {
+  font-family: "Antonio";
+  background: linear-gradient(45deg, #d89463, #58432f);
+  font-size: 10rem;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.social-links {
+  display: flex;
+  font-size: 3rem;
+  color: #333030;
+}
+
+.social-links__link {
+  color: #333030;
+  margin-inline-end: 5px;
+}
+
+.contact__text {
+  color: #c4ac7c;
+  font-family: "Zilla Slab";
+  font-size: 1.7rem;
+}
+
+.contact__link {
+  color: coral;
+}

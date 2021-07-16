@@ -38,7 +38,7 @@
       scrollTrigger: {
         trigger: desc,
         toggleActions: "play reverse play reverse",
-        start: "bottom bottom",
+        start: "start bottom",
         markers: true,
       },
     });
