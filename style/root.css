@@ -4,6 +4,12 @@
   --secondary-dark-color: #000000;
 }
 
+@media (max-width: 680px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 @font-face {
   font-family: "Pricedown";
   src: url("../assets/fonts/pricedown-bold.otf");

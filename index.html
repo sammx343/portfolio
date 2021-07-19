@@ -2,10 +2,6 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/locomotivemtl/locomotive-scroll/master/dist/locomotive-scroll.css"
-    />
     <link rel="stylesheet" href="style/root.css" />
     <link rel="stylesheet" href="style/index.css" />
     <link rel="stylesheet" href="style/hero-intro.css" />
@@ -99,17 +95,17 @@
   </head>
   <body>
     <div class="main-page">
-      <div class="hero-intro">
+      <div class="hero-intro" id="home-section">
         <div class="main-header">
-          <a href="main-header__link" class="main-header__link">Home</a>
-          <a href="main-header__link" class="main-header__link">Me</a>
-          <a href="main-header__link" class="main-header__link"
+          <a href="#home-section" class="main-header__link">Home</a>
+          <a href="#me-section" class="main-header__link">Me</a>
+          <a href="#web-dev-section" class="main-header__link"
             >Web Development</a
           >
-          <a href="main-header__link" class="main-header__link"
+          <a href="#game-dev-section" class="main-header__link"
             >Game Development</a
           >
-          <a href="main-header__link" class="main-header__link">Contact</a>
+          <a href="#contact-section" class="main-header__link">Contact</a>
         </div>
         <div class="box-line-container box-line-container--outer">
           <div
@@ -171,7 +167,7 @@
           </div>
         </div>
       </div>
-      <div class="me-container">
+      <div class="me-container" id="me-section">
         <div class="me-info">
           <div class="word-strip word-strip--left-orientation"></div>
           <div class="me-info__container">
@@ -211,7 +207,7 @@
           <div class="word-strip word-strip--right-orientation"></div>
         </div>
       </div>
-      <div class="web-dev">
+      <div class="web-dev" id="web-dev-section">
         <div class="web-dev__title-container">
           <h2 class="web-dev__title" title="WEB DEV">WEB DEV</h2>
         </div>
@@ -383,7 +379,7 @@
           </div>
         </div>
       </div>
-      <div class="game-dev">
+      <div class="game-dev" id="game-dev-section">
         <p class="game-dev__greetings">Greetins from ...</p>
         <div class="game-dev__container">
           <h2 class="game-dev__title">Game Developer</h2>
@@ -691,7 +687,7 @@
           </div>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contact-section">
         <div class="contact-container">
           <div class="contact__start">
             <h2 class="contact__title">CONTACT</h2>
@@ -759,12 +755,12 @@
     crossorigin="anonymous"
   ></script>
   <!-- <script src="js/smooth-mouse-wheel.js"></script> -->
-  <script src="js/hero-intro.js"></script>
-  <script src="js/me-info.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/web-dev.js"></script>
-  <script src="js/game-dev.js"></script>
-  <script src="js/contact.js"></script>
+  <script src="js/hero-intro.js?version=1"></script>
+  <script src="js/me-info.js?version=1"></script>
+  <script src="js/index.js?version=1"></script>
+  <script src="js/web-dev.js?version=1"></script>
+  <script src="js/game-dev.js?version=1"></script>
+  <script src="js/contact.js?version=1"></script>
 
   <script>
     gsap.registerPlugin(ScrollTrigger);

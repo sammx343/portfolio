@@ -256,3 +256,48 @@
   right: 0;
   transform: translate(-4px, 2px);
 }
+
+@media (max-width: 680px) {
+  .main-header__link {
+    margin: 0 2rem;
+  }
+
+  .main-header {
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .hero-intro {
+    position: relative;
+    --box-line-outer-width: 100%;
+    --box-line-outer-height: 100%;
+    --box-line-inner-width: 90%;
+    --box-line-inner-height: 90%;
+  }
+
+  .main-info {
+    max-width: 100vw;
+    width: 80vw;
+  }
+
+  .scroll-prompt__bar {
+    max-width: 2rem;
+    max-height: 2rem;
+    border: 2px solid black;
+  }
+
+  .scroll-prompt--left-bar {
+    left: 40%;
+    transform: translate(0, -10%) rotate(-45deg);
+  }
+
+  .scroll-prompt--right-bar {
+    left: 52%;
+    transform: translate(0, -10%) rotate(45deg);
+  }
+
+  .showup-line {
+    border: 3px solid var(--secondary-dark-color);
+  }
+}

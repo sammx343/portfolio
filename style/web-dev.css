@@ -19,6 +19,7 @@
   padding: 0 1rem 0 5rem;
   width: max-content;
   text-align: center;
+  max-width: 100%;
 }
 
 .web-dev__title {
@@ -75,7 +76,7 @@
 .web-strip__subtitle {
   font-size: 3.5rem;
   font-family: "Anton", cursive;
-  margin-bottom: 2rem;
+  margin-bottom: 25%;
 }
 
 .web-portfolio__description,
@@ -113,4 +114,96 @@
 .web-strip__image {
   max-width: 100%;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .web-dev__title {
+    font-size: 8rem;
+  }
+
+  .web-dev__title-container {
+    padding: 0 1rem;
+  }
+
+  .web-portfolio__description-container {
+    margin: auto;
+    max-width: 90%;
+  }
+
+  .web-portfolio {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .web-dev__title {
+    max-width: 100%;
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .web-dev {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .web-dev__title-container {
+    top: 0;
+    margin-top: 0;
+    padding: 0;
+    position: static;
+    height: auto;
+  }
+
+  .web-dev__title {
+    font-size: 9rem;
+    text-align: center;
+    transform: translate(0) !important;
+  }
+
+  .web-portfolio {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .web-portfolio__description-container {
+    transform: initial;
+    max-width: 100%;
+  }
+
+  .web-portfolio__subtitle {
+    margin-bottom: 25%;
+  }
+
+  .web-portfolio__description,
+  .web-strip__description,
+  .web-portfolio__list {
+    font-size: 2.3rem;
+  }
+
+  .web-portfolio__list li,
+  .web-strip__list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .web-dev {
+    background: linear-gradient(180deg, #8c31b3 30%, #4e1c67);
+    background-attachment: inherit;
+  }
+
+  .web-portfolio__subtitle,
+  .web-portfolio__list,
+  .web-portfolio__description,
+  .web-strip__subtitle,
+  .web-strip__list,
+  .web-strip__description {
+    text-shadow: 2px 2px black;
+  }
+}
+
+@media (max-width: 375px) {
+  .web-dev__title {
+    font-size: 7rem;
+  }
 }

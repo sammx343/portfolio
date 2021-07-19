@@ -1,6 +1,7 @@
 .contact {
   position: relative;
   background: #26486c;
+  max-width: 100%;
 }
 
 .contact-container {
@@ -51,4 +52,18 @@
 
 .contact__link {
   color: coral;
+}
+
+@media (max-width: 680px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact__start {
+    padding: 1rem;
+  }
+
+  .contact__title {
+    font-size: 5rem;
+  }
 }
