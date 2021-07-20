@@ -2,6 +2,7 @@
   font-size: 16px;
   --main-light-color: #f9f3eb;
   --secondary-dark-color: #000000;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 680px) {
