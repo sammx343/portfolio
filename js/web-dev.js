@@ -1,6 +1,17 @@
 (function () {
   document.addEventListener("mousemove", mouseEvents);
   const webDevText = document.querySelector(".web-dev__title");
+  const webDevCurrentYear = document.querySelector(".web-portfolio__current_year");
+
+  function init(){
+    changeWebDevCurrentYear();
+  }
+
+  function changeWebDevCurrentYear(){
+    if (webDevCurrentYear) {
+      webDevCurrentYear.innerText = (new Date().getFullYear()) + '';
+    }
+  }
 
   function mouseEvents(e) {
     changeTextBackgrundPosition(e);
@@ -27,36 +38,4 @@
       y: e.clientY / window.innerHeight,
     };
   }
-
-  // let constrain = 20;
-  // let mouseOverContainer = document.querySelector(".web-dev_title-container");
-
-  // function transforms(x, y, el) {
-  //   let box = el.getBoundingClientRect();
-  //   let calcX = -(y - box.y - box.height / 2) / constrain;
-  //   let calcY = (x - box.x - box.width / 2) / constrain;
-
-  //   return (
-  //     "perspective(100px) " +
-  //     "   rotateX(" +
-  //     calcX +
-  //     "deg) " +
-  //     "   rotateY(" +
-  //     calcY +
-  //     "deg) "
-  //   );
-  // }
-
-  // function transformElement(el, xyEl) {
-  //   el.style.transform = transforms.apply(null, xyEl);
-  // }
-
-  // mouseOverContainer.onmousemove = function (e) {
-  //   let xy = [e.clientX, e.clientY];
-  //   let position = xy.concat([webDevText]);
-
-  //   window.requestAnimationFrame(function () {
-  //     transformElement(webDevText, position);
-  //   });
-  // };
 })();

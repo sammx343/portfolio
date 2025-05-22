@@ -33,16 +33,6 @@
       ease: "power3.out",
     });
 
-    gsap.from(".game-dev__subtitle", {
-      scrollTrigger: ".game-dev__title", // start the animation when ".box" enters the viewport (once)
-      y: 300,
-      opacity: 0,
-      delay: 0.25,
-      duration: 2,
-      start: "bottom bottom",
-      ease: "power3.out",
-    });
-
     gsap.utils.toArray(".game-dev__description").forEach((desc) => {
       let tl = gsap.timeline({
         scrollTrigger: {

@@ -1,11 +1,23 @@
 (function () {
-  OnInit();
   let heroIntroEl = document.querySelector(".hero-intro");
   let scrollAnimationStates = {
     notCreated: "notCreated",
     created: "created",
   };
   scrollAnimationState = scrollAnimationStates.notCreated;
+
+  window.onscroll = function () {
+    scrollTransformSection();
+  };
+
+  function OnInit() {
+    if (window.pageYOffset > screen.height && screen.width > 680) {
+      document.querySelector(".hero-intro").style.transform =
+        "translateY(-100vh)";
+    }
+  }
+
+  OnInit();
 
   gsap.to(".text-show-line", { top: "49%", duration: 1.5, ease: "back" });
 
@@ -57,17 +69,6 @@
       duration: 0.25,
     });
     return tl;
-  }
-
-  window.onscroll = function () {
-    scrollTransformSection();
-  };
-
-  function OnInit() {
-    if (window.pageYOffset > screen.height && screen.width > 680) {
-      document.querySelector(".hero-intro").style.transform =
-        "translateY(-100vh)";
-    }
   }
 
   function scrollTransformSection() {
